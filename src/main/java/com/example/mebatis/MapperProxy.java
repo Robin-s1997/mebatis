@@ -31,7 +31,7 @@ public class MapperProxy implements InvocationHandler {
         String mapperInterface = method.getDeclaringClass().getName();
         String name = method.getName();
         String sql = mapperInterface + "." + name;
-
+        System.out.println("wtf");
         return sqlSession.selectOne(sql, args[0]);
 
     }
